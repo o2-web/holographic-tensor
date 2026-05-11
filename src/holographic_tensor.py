@@ -60,16 +60,6 @@ def decompress_2d_to_3d(compressed_2d, index_table):
     else:
         Z = 0
 
-    if np is not None:
-        result = np.zeros((X, Y, Z), dtype=int)
-
-        for x in range(X):
-            for y in range(Y):
-                idx = compressed_2d[x][y]
-                result[x, y, :] = index_table[idx]
-
-        return result
-
     result = [[[0 for _ in range(Z)] for _ in range(Y)] for _ in range(X)]
 
     for x in range(X):
