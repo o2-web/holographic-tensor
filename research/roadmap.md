@@ -8,7 +8,7 @@ Current implementation provides:
 - basic functional tests for roundtrip and deduplication
 
 Current gaps:
-- no input validation for non-rectangular tensors and invalid indices
+- baseline input validation added; remaining gap is coverage depth/CI coverage target
 - no benchmark harness or baselines
 - no quantitative quality metrics beyond deduplication count
 - no experiments documented as reproducible protocols
@@ -155,8 +155,13 @@ Identify where method underperforms:
 ---
 
 ## Priority Backlog (next 2–3 sprints)
-1. Input validation + edge-case tests
-2. Benchmark harness (`gzip/lz4`) and metric logger
+1. ~~Input validation + edge-case tests~~ ✅ (completed)
+2. Benchmark harness (`gzip/lz4`) and metric logger **(active next step)**
 3. Synthetic dataset generator with fixed seeds
 4. Entropy and scaling analysis notebook
 5. Figure generation pipeline
+
+
+## Progress Notes
+- 2026-05-11: Completed initial input validation hardening and edge-case test coverage for compress/decompress APIs.
+- 2026-05-11: Next immediate focus is benchmark harness + metric logging (Priority Backlog item #2).
