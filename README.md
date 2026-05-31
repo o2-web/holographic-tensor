@@ -103,6 +103,8 @@ print(table)
 
 ## Research Goals
 
+A detailed hypothesis-driven research plan is available in [`research/hypothesis_plan.md`](research/hypothesis_plan.md).
+
 ### Near-term
 - Benchmark against gzip/lz4
 - Add entropy analysis
